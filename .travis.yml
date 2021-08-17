@@ -15,7 +15,7 @@ before_install:
 after_success:
 # 这里有问题，把打包好的文件上传到服务器
 - scp -r docs root@60.205.179.50:/www/server/tomcat/webapps/vary_blogs
-  - echo "success is running"
+- echo "success is running"
 
 notifications:
   email:
