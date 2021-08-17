@@ -11,15 +11,12 @@ addons:
 before_install:
 - openssl aes-256-cbc -K $encrypted_8e3301ed1bb3_key -iv $encrypted_8e3301ed1bb3_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
+  # 需要设置权限
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "Host 主机IP地址\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 after_success:
-# 这里有问题，把打包好的文件上传到服务器
-# - cd / && scp -r docs root@60.205.179.50:/www/server/tomcat/webapps/vary_blogs
-# - echo "success is running"
 - scp -o stricthostkeychecking=no -r docs root@60.205.179.50:/www/server/tomcat/webapps/vary_blogs
-# - echo "success is running"
 
 notifications:
   email:

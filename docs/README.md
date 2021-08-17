@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /img/logo.jpeg
-actionText: Hello, world! →
+actionText: Hi, you! →
 actionLink: /tittle-tattle/
 meta:
 - name: keywords
