@@ -35,6 +35,7 @@ module.exports = {
         text: '博文',
         items: [
           { text: 'Java', link: '/java/' },
+          { text: 'Go', link: '/Go/' },
           { text: 'Kotlin', link: '/kotlin/' },
           { text: 'Css', link: '/css/' },
         ]
